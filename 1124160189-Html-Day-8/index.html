@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contoh Frameset</title>
-    <frameset cols="30%, 70%">
-        <frame src="menu.html" name="menuFrame">
-        <frame src="Konten.html" name="kontenFrame">
-    </frameset>
+    <title>Contoh Layout</title>
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+        .menu {
+            width: 30%;
+            height: 100%;
+            border-right: 1px solid #ccc;
+        }
+        .content {
+            width: 70%;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="menu">
+            <iframe src="menu.html" name="menuFrame" title="Menu Navigasi"></iframe>
+        </div>
+        <div class="content">
+            <iframe src="Konten.html" name="kontenFrame" title="Konten Utama"></iframe>
+        </div>
+    </div>
 </body>
 </html>
